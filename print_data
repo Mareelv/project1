@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+void main()
+
+{
+
+	int a=1234;
+
+	float f=1234.456;
+
+	char ch='a';
+
+	printf("%8d,%2d\n",a,a);
+
+	printf("%f,%.2f\n",f,f);
+
+	printf("%3c\n",ch);
+
+}
