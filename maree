@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+void main()
+
+{   int x,i;
+
+	printf("please input a integer x:");
+
+	scanf("%d",&x);
+
+	if(0<x&&x<100)
+
+		{for(i=1;i<=x;i++)
+
+			if(x%i==0)
+
+				printf("%d ",i);}
+
+	else 
+
+		printf("data error\n");
+
+}
+
+为什么程序变成这样就不对了呢？（即将在for语句中的大括号给去掉了）
+
+#include <stdio.h>
+
+void main()
+
+{   int x,i;
+
+	printf("please input a integer x:");
+
+	scanf("%d",&x);
+
+	if(0<x&&x<100)
+
+	for(i=1;i<=x;i++)
+
+		if(x%i==0)
+
+			printf("%d ",i);
+
+	else 
+
+		printf("data error\n");
+
+}
