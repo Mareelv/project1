@@ -1,0 +1,47 @@
+#include<stdio.h>
+
+void main()
+
+{	void select(int a[],int n);
+
+	int a[5],i;
+
+	printf("input 5 numbers:");
+
+	for(i=0;i<5;i++)
+
+		scanf("%d",&a[i]);
+
+	putchar('\n');
+
+	select(a,5);
+
+	for(i=0;i<5;i++)
+
+		printf("%d ",a[i]);
+
+}
+
+void select(int a[],int n)//void就不需要返回值了
+
+{	int i,j,k,temp;
+
+	for(i=0;i<n-1;i++)
+
+	{	k=i;
+
+	for(j=i+1;j<n;j++)//第一次循环将最大的值放到最后一个，然后依次类推
+
+		if(a[j]<a[k])
+
+			k=j;
+
+		if(k!=i)
+
+		{temp=a[k];
+
+		a[k]=a[i];
+
+		a[i]=temp;}
+
+}}
