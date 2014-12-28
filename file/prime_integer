@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+#include<math.h>
+
+void main()
+
+{	int m,i,k,n=0;
+
+    for(m=101;m<=200;m+=2)
+
+	{	
+
+		k=(int)sqrt(m);//本行到第10行原意是判断此时的i是否是质数,并且如果是质数就输出，但是现在程序成了求奇数的了，郁闷啊！
+
+	    for(i=2;i<=k;i++)
+
+		if(m%i==0)break;
+
+		if(i>k)
+
+	{printf("%5d\n",m);
+
+		  
+
+		   }
+
+	//	else printf("",i);
+
+	  
+
+}}
