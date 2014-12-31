@@ -1,0 +1,55 @@
+#include<stdio.h>
+
+int i=1;
+
+void main()
+
+{static int a;
+
+	register int b=-10;
+
+	 char other();
+
+int c=0;
+
+printf("-----MAIN-----\n");
+
+printf("i:%d a:%d \b:%d c:%d\n",i,a,b,c);
+
+c=c+8;
+
+other();
+
+printf("-----MAIN-----\n");
+
+printf("i:%d a:%d \b:%d c:%d\n",i,a,b,c);
+
+i=i+10;
+
+other();
+
+}
+
+
+
+char other()
+
+{static int a=2;
+
+static int b;
+
+int c=10;
+
+a=a+2; i=i+32;
+
+c=c+5;
+
+printf("-----OTHER-----\n");
+
+printf("i:%d a:%d \b:%d c:%d\n",i,a,b,c);
+
+b=a;
+
+return 0;
+
+}
