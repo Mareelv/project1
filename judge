@@ -1,0 +1,37 @@
+#include<stdio.h>
+
+void main()
+
+{	int a,b,c,d,e,s,f,g,h,i;
+
+	printf("please enter this shu:");
+
+	scanf("%d",&s);
+
+	a=s/10;b=s/100;c=s/1000;d=s/10000;
+
+	e=s%10;
+
+	f=a%10;
+
+	g=b%10;
+
+	h=c%10;
+
+	i=d/10;
+
+	if (a==0) printf("这个数是一位数\n");
+
+	else if (b==0) printf("这个数是二位数\n");
+
+    else if (c==0) printf("这个数是三位数\n");
+
+	else if (d==0) printf("这个数是四位数\n");
+
+		else  printf("这个数是五位数\n");
+
+	printf("个位=%d\n十位=%d\n百位=%d\n千位=%d\n万位=%d\n",e,f,g,h,i);
+
+	printf("逆序输出:%d%d%d%d%d",e,f,g,h,i);
+
+}
