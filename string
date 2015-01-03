@@ -1,0 +1,77 @@
+#include<stdio.h>
+
+#include<conio.h>
+
+void fun(char*a,int n)
+
+{	/*char *b;b=a;
+
+	int i=0,k=0;
+
+	while(*b=='*')
+
+	k++;
+
+	if(k>n)本段程序不可以运行原因两个1是第一个while计时的时候，必须加个b++,不然无法计数，
+
+	因为指针无法指向第二个数，另外在第while循环的时候，这时b已经指向了第一个字母了，所有
+
+	如果想要只用一个指针的话必须在第二个while之前加个b=a；
+
+	{while(*b)
+
+	{a[i]=*(b+k-n);
+
+	i++;
+
+	b++;}
+
+	a[i]='\0';}*/
+
+	int i=0,k=0;
+
+	char *p,*t;
+
+	p=t=a;
+
+	while(*t=='*')
+
+	{k++;t++;
+
+	}
+
+	if(k>n)
+
+	{while(*p)
+
+	{a[i]=*(p+k-n);
+
+	i++;
+
+	p++;
+
+	}
+
+	a[i]='\0';}
+
+}
+
+void main()
+
+{	char s[81];int n;
+
+	printf("Enter a string:\n");
+
+	gets(s);
+
+	printf("Enter n:");
+
+	scanf("%d",&n);
+
+	fun(s,n);
+
+	printf("The string after deleted:\n");
+
+	puts(s);
+
+}
