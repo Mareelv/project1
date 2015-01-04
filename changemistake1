@@ -1,0 +1,63 @@
+#include<stdio.h>
+
+#include<conio.h>
+
+#include<string.h>
+
+#include<stdlib.h>
+
+int fun(char*s,char*t)
+
+{	
+
+	int n;
+
+	char *p,*r;
+
+	n=0;
+
+	while(*s)
+
+	{p=s;
+
+	r=t;
+
+	while(*r)
+
+	if(*r==*p)
+
+	{r++;p++;}
+
+	else break;
+
+	if(*r=='\0')
+
+		n++;
+
+	s++;
+
+	}
+
+	return n;
+
+}
+
+void main()
+
+{	char s[100],t[100];int m;
+
+	system("CLS");
+
+	printf("\n Please Enter string s:");
+
+	scanf("%s",s);
+
+	printf("\n Please Enter substring t:");
+
+	scanf("%s",t);
+
+	m=fun(s,t);
+
+	printf("The result is:m=%d\n",m);
+
+}
